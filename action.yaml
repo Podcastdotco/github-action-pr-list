@@ -1,0 +1,23 @@
+name: 'List Pull Request'
+description: 'List pull request and filter them by label and/or if the checks are passing.'
+inputs:
+  token:
+    description: 'github token'
+    required: true
+    default: ''
+  labels:
+    description: 'require labels to list (JSON array string)'
+    required: false
+    default: '[ "dependencies" ]'
+  checkStatus:
+    description: 'Only return PRs with success status'
+    required: false
+    default: 'false'
+outputs:
+  pulls:
+    description: 'List of pull request'
+  count:
+    description: 'Count of pull requests'
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
