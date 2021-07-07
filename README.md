@@ -3,7 +3,7 @@ List pull request and filter them by label and/or if the checks are passing.
 
 # Usage
 
-See [action.yml](action.yml)
+See [action.yaml](action.yaml)
 
 Basic:
 ```yaml
