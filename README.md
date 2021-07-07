@@ -12,7 +12,7 @@ steps:
   uses: actions/checkout@master
 
 - name: Retrive PRs
-  uses: ./.github/actions/pr-list
+  uses: Podcastdotco/github-action-pr-list@mater
   id: prlist
   with:
     token: ${{ secrets.GITHUB_TOKEN }}
@@ -20,5 +20,5 @@ steps:
     checkStatus: 'true'
 
 - name: Get the output
-  run: echo "THere are ${{ steps.prlist.outputs.count }} PRs"
+  run: echo "There are ${{ steps.prlist.outputs.count }} PRs"
 ```
